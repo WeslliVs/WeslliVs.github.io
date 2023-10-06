@@ -118,14 +118,16 @@ div.link-menu:hover div.menu {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) { 
+  /* Tive que usar o max-width para determinar, pois quase no fim da prova vi que o erro era pq eu estava fazendo ao contrário, 
+  era mais rápido arrumar trocando min-width por max-width */
+
   /* Estilo do menu lateral esquerdo */
   .sidebar-left {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 50px;
-    min-height: 20px;
     background-color: #68edff;
   }
 
