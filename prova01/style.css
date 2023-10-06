@@ -1,0 +1,142 @@
+/* Define o estilo global para o documento */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo da barra de navegação superior */
+.navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: stretch;
+}
+
+/* Estilo dos botões da barra de navegação */
+.navbar button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #ff5353;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 3px 7px 5px;
+  cursor: pointer;
+  transition: transform 400ms, box-shadow 400ms;
+}
+
+/* Estilo dos links na barra de navegação */
+.navbar a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Estilo do menu lateral esquerdo */
+.sidebar-left {
+  width: 20vw;
+  height: 1200px;
+  min-height: 50px;
+  background-color: #68edff;
+  padding: 20px;
+  top: 0;
+  left: 0;
+}
+
+/* Estilo dos links no menu lateral esquerdo */
+.sidebar-left a {
+  display: block;
+  margin: 10px;
+  color: #333;
+}
+
+/* Define a estrutura do conteúdo principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@media screen and (min-width: 600px) {
+  /* Estilo do menu lateral esquerdo */
+  .sidebar-left {
+    width: 100%;
+    min-height: 20px;
+    background-color: #68edff;
+  }
+
+  /* Estilo dos links no menu lateral esquerdo */
+  .sidebar-left a {
+    display: block;
+    margin: 10px;
+    color: #333;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+}
+
+/* Estilo do conteúdo principal */
+.content {
+  margin: 20px;
+  flex-grow: 1;
+  width: 80vw;
+  height: 1200px;
+}
+
+/* Estilo da galeria de imagens */
+.gallery {
+  display: block;
+}
+
+/* Estilo das imagens na galeria */
+.gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Estilo do rodapé */
+.footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+div.menu {
+  position: relative;
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+
+div.link-menu:hover div.menu {
+  display: block;
+  background-color: white;
+}
+
+.loader {
+  width: 48px; /* Define largura */
+  height: 48px; /* Define altura */
+  border: 5px solid #fff; /* Define a cor interna do botão como branca*/
+  border-bottom-color: #ff3d00; /* Define a cor do espaço que ficará girando */
+  border-radius: 50%; /* Define o tamanho do raio do loader, determinando o formato dele que nesse caso é um círculo */
+  display: inline-block; /* Determina o tipo do elemento que será visualizado  */
+  box-sizing: border-box; /* Determina o comportamento desse elemento */
+  animation: rotation 1s linear infinite; /* Combina algumas propriedades para criar uma animação, nesse caso linear e infinita */
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg); /* Determina o grau da rotação quando está em 0% */
+  }
+
+  100% {
+    transform: rotate(
+      360deg
+    ); /* Determina o grau da rotação quando está em 100% */
+  }
+}
