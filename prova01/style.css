@@ -34,47 +34,24 @@ body {
 
 /* Estilo do menu lateral esquerdo */
 .sidebar-left {
+  display: flex;
+  flex-direction: column;
   width: 20vw;
   height: 1200px;
-  min-height: 50px;
   background-color: #68edff;
   padding: 20px;
-  top: 0;
-  left: 0;
 }
 
 /* Estilo dos links no menu lateral esquerdo */
 .sidebar-left a {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin: 10px;
   color: #333;
 }
 
-/* Define a estrutura do conteúdo principal */
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-@media screen and (min-width: 600px) {
-  /* Estilo do menu lateral esquerdo */
-  .sidebar-left {
-    width: 100%;
-    min-height: 20px;
-    background-color: #68edff;
-  }
-
-  /* Estilo dos links no menu lateral esquerdo */
-  .sidebar-left a {
-    display: block;
-    margin: 10px;
-    color: #333;
-  }
-
-  .container {
-    flex-direction: row;
-  }
 }
 
 /* Estilo do conteúdo principal */
@@ -138,5 +115,35 @@ div.link-menu:hover div.menu {
     transform: rotate(
       360deg
     ); /* Determina o grau da rotação quando está em 100% */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Estilo do menu lateral esquerdo */
+  .sidebar-left {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    min-height: 20px;
+    background-color: #68edff;
+  }
+
+  /* Estilo dos links no menu lateral esquerdo */
+  .sidebar-left a {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    color: #333;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .content {
+    flex-direction: column;
   }
 }
